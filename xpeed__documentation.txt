@@ -1,0 +1,32 @@
+Terminology:
+- Purchase: I assumed that the purpose of the form is to create a new purchase entity. So each form submitted, a new purchase entity inserted into the database. In the report page, show all purchase listings and search through them.
+
+Feature:
+- Show the form to create new purchase
+- Add new purchase entity through “Add Purchase” form
+- Form handled through jQuery Ajax
+- Back-end form validation
+- Cookie restriction to submit the form only once
+- Show the report page with listing all purchases
+- In report page search by date range and search by user id (e.g. entry_by field)
+
+How to Run and Test (xampp):
+- Unzip the folder inside htdocs folder of xampp
+- You will get a folder "xpeedstudio" this is the project directory
+- Create a Database using phpMyAdmin
+- in the root of project directory you  will get "demo_table.sql"  
+- Import "demo_table.sql" table into your database using phpmyadmin
+- Set-up database connection in "getBdd()" method of "root/bootstrap/Database.php" class
+- Hit this url "http://localhost/xpeedstudio/purchases/create" to get started with "Add Purchase" form
+
+
+
+Routing Pattern:
+- url: http://localhost/xpeedstudio/purchases/create
+- domain: http://localhost/xpeedstudio/
+- controller: purchases/
+- action/method: create/
+
+Known gotcha:
+- Root directory name is not dynamic so the project root directory name must be "xpeedstudio"
+
